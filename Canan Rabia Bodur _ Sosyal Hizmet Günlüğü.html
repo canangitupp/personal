@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Canan Rabia Bodur | Sosyal Hizmet Günlüğü</title>
+<meta name="description" content="Canan Rabia Bodur, sosyal hizmet öğrencisi. Kişisel tanıtım sayfası ve blog.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2A41;--paper:#F4F7F6;--surface:#FFFFFF;--teal:#2F7F79;--sun:#F2B134;
+  --muted:#52606D;--line:#D5DEDB;--on-ink:#F4F7F6;
+  --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--ink:#EAF0EE;--paper:#14202B;--surface:#1C2B38;--teal:#6FC2BA;--muted:#A9B7B3;--line:#2C3E4C;--on-ink:#14202B}
+}
+:root[data-theme="dark"]{--ink:#EAF0EE;--paper:#14202B;--surface:#1C2B38;--teal:#6FC2BA;--muted:#A9B7B3;--line:#2C3E4C;--on-ink:#14202B}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:5rem;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.75}
+a{color:var(--teal);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+
+header.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:1.25rem 0}
+.logo{font-family:var(--head);font-weight:700;color:var(--ink);text-decoration:none;font-size:1.05rem}
+nav{display:flex;align-items:center;flex-wrap:wrap;gap:.25rem 1.1rem}
+nav a{font-family:var(--head);font-weight:500;font-size:.98rem;color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--teal)}
+.theme{font-family:var(--head);font-weight:500;font-size:.9rem;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:.3rem .8rem;cursor:pointer}
+.theme:hover{border-color:var(--teal);color:var(--teal)}
+
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:2rem;align-items:center;padding:3rem 0 4.5rem}
+.hero h1{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 1.25rem}
+.hero p.lead{font-size:1.3rem;max-width:33rem;color:var(--muted);margin:0 0 2rem}
+.btn{display:inline-block;font-family:var(--head);font-weight:700;background:var(--ink);color:var(--on-ink);padding:.8rem 1.4rem;border-radius:999px;text-decoration:none}
+.btn:hover{background:var(--teal);color:#fff}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:.6rem}
+.btn.alt:hover{border-color:var(--teal);color:var(--teal);background:transparent}
+.avatar{width:100%;max-width:21rem;height:auto;justify-self:center;display:block}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-family:var(--head);font-weight:700;font-size:clamp(1.7rem,4vw,2.3rem);letter-spacing:-.015em;line-height:1.15;margin:0 0 1.5rem}
+h3{font-family:var(--head);font-size:1.2rem;margin:0 0 .5rem;line-height:1.3}
+.two{display:grid;grid-template-columns:1fr 1.7fr;gap:2.5rem}
+.two p,.prose p{margin:0 0 1.1rem;max-width:41rem}
+.facts{list-style:none;margin:1.5rem 0 0;padding:0}
+.facts li{padding:.9rem 0;border-bottom:1px solid var(--line)}
+.facts li:first-child{padding-top:0}
+.facts b{display:block;font-family:var(--head);font-size:1.05rem}
+.facts span{color:var(--muted);font-size:1rem}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem}
+.grid.four{grid-template-columns:repeat(2,1fr)}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
+.item p{margin:0;font-size:1.02rem;color:var(--muted);line-height:1.6}
+.item:nth-child(2){border-radius:28px 6px 28px 6px}
+
+.steps{list-style:none;counter-reset:s;margin:1.5rem 0 0;padding:0;max-width:44rem}
+.steps li{counter-increment:s;position:relative;padding:0 0 1.4rem 3.4rem;border-left:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:.1rem;width:2.3rem;height:2.3rem;border-radius:50%;background:var(--sun);color:#1B2A41;font-family:var(--head);font-weight:700;display:grid;place-items:center}
+.steps li::after{content:"";position:absolute;left:1.1rem;top:2.5rem;bottom:.2rem;width:2px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps p{margin:0;color:var(--muted);font-size:1.03rem;line-height:1.6}
+
+.quote{font-size:clamp(1.35rem,3vw,1.8rem);line-height:1.45;font-style:italic;max-width:42rem;margin:2rem 0 0;padding-left:1.25rem;border-left:5px solid var(--sun)}
+
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.25rem}
+.filters button{font-family:var(--head);font-weight:500;font-size:.95rem;background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:.35rem 1rem;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+details.post{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:1rem}
+details.post summary{cursor:pointer;list-style:none;padding:1.2rem 1.4rem;display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+details.post summary::-webkit-details-marker{display:none}
+details.post summary::after{content:"+";font-family:var(--head);font-size:1.6rem;line-height:1;color:var(--teal)}
+details.post[open] summary::after{content:"–"}
+.post-title{font-family:var(--head);font-weight:700;font-size:1.2rem;line-height:1.3}
+.post-meta{display:block;font-size:.92rem;color:var(--muted);font-family:var(--body);font-weight:400;margin-top:.2rem}
+.post-body{padding:0 1.4rem 1.3rem;max-width:44rem}
+.post-body p{margin:0 0 1rem}
+.post-body ul{margin:0 0 1rem;padding-left:1.2rem}
+
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:1.5rem}
+  .avatar{max-width:12rem;justify-self:start;order:-1}
+  .two,.grid,.grid.four{grid-template-columns:1fr}
+  .btn.alt{margin:.6rem 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="logo" href="#ust">Canan Rabia Bodur</a>
+  <nav aria-label="Ana menü">
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#sosyal-hizmet">Sosyal hizmet</a>
+    <a href="#tez">Tezim</a>
+    <a href="#blog">Blog</a>
+    <a href="#neden">Neden bu site?</a>
+    <a href="#iletisim">İletişim</a>
+    <button class="theme" id="theme" type="button" aria-label="Açık ve koyu tema arasında geçiş yap">Tema</button>
+  </nav>
+</header>
+
+<main id="ust">
+  <div class="hero">
+    <div>
+      <h1>Merhaba, ben Canan.</h1>
+      <p class="lead">Sosyal hizmet bölümünde 4. sınıf öğrencisiyim. Bu sayfada kendimi tanıtıyor, mesleğe dair öğrendiklerimi, tez sürecimi ve staj notlarımı paylaşıyorum.</p>
+      <a class="btn" href="#hakkimda">Beni tanıyın</a>
+      <a class="btn alt" href="#blog">Yazılarıma bakın</a>
+    </div>
+    <svg class="avatar" viewBox="0 0 200 200" role="img" aria-label="Canan’ın profil fotoğrafı yerine çizilmiş bir kedi">
+      <circle cx="100" cy="100" r="96" fill="#F2B134"/>
+      <g stroke="#1B2A41" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 92 L54 34 L94 64 Z" fill="#E9A96B"/>
+        <path d="M150 92 L146 34 L106 64 Z" fill="#E9A96B"/>
+        <path d="M59 80 L61 52 L80 66 Z" fill="#F4B8C0" stroke-width="2"/>
+        <path d="M141 80 L139 52 L120 66 Z" fill="#F4B8C0" stroke-width="2"/>
+        <ellipse cx="100" cy="116" rx="60" ry="52" fill="#F0C48B"/>
+        <path d="M100 66 V80 M86 70 L89 82 M114 70 L111 82" fill="none"/>
+        <ellipse cx="78" cy="110" rx="7" ry="9" fill="#1B2A41"/>
+        <ellipse cx="122" cy="110" rx="7" ry="9" fill="#1B2A41"/>
+        <circle cx="80" cy="106" r="2.5" fill="#fff" stroke="none"/>
+        <circle cx="124" cy="106" r="2.5" fill="#fff" stroke="none"/>
+        <path d="M93 126 H107 L100 134 Z" fill="#E58F9C"/>
+        <path d="M100 134 Q92 146 82 140 M100 134 Q108 146 118 140" fill="none"/>
+        <path d="M60 128 L28 122 M60 138 L28 142 M140 128 L172 122 M140 138 L172 142" fill="none" stroke-width="2.5"/>
+      </g>
+      <circle cx="66" cy="128" r="7" fill="#F4B8C0" opacity=".6"/>
+      <circle cx="134" cy="128" r="7" fill="#F4B8C0" opacity=".6"/>
+    </svg>
+  </div>
+
+  <section id="hakkimda">
+    <div class="two">
+      <h2>Hakkımda</h2>
+      <div>
+        <p>Adım Canan Rabia Bodur. Sosyal hizmet eğitimimin son yılındayım ve şu anda staj yapıyorum. Dört yıl boyunca derslerde öğrendiğim kuramları, sahada gördüğüm gerçek yaşamlarla buluşturmaya çalışıyorum. Bu buluşma, mesleğe dair en çok öğrendiğim yer oldu.</p>
+        <p>Beni bu mesleğe çeken şey, insanın hikâyesini yargılamadan dinleyebilmek ve ona uygun desteği birlikte bulabilmek. Her birey ve her aile kendine özgü bir durumun içinde. Bu yüzden hazır cevaplar vermek yerine soru sormayı, önce anlamayı, sonra planlamayı önemsiyorum.</p>
+        <p>Staj sürecinde gözlem yapıyor, görüşmelere katılıyor ve gördüklerimi staj defterime işliyorum. Aynı zamanda sosyal inceleme raporları hazırlıyor ve bitirme tezimle ilgili araştırma yapıyorum. Bu sayfayı da bütün bu öğrendiklerimi düzenli biçimde bir araya getirmek için kurdum.</p>
+        <ul class="facts">
+          <li><b>Bölüm</b><span>Sosyal Hizmet, 4. sınıf</span></li>
+          <li><b>Şu an</b><span>Staj yapıyorum, staj defterimi, raporlarımı ve tezimi hazırlıyorum</span></li>
+          <li><b>İlgi alanlarım</b><span>Çocuk ve aile çalışmaları, sosyal inceleme, araştırma yöntemleri</span></li>
+          <li><b>Dil</b><span>Türkçe</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="sosyal-hizmet">
+    <h2>Sosyal hizmet nedir?</h2>
+    <div class="prose">
+      <p>Sosyal hizmet; birey, aile, grup ve toplulukların yaşadığı sorunları çözmelerine ve sosyal işlevselliklerini güçlendirmelerine yardım eden bir meslek ve bilim dalıdır. Yalnızca “yardım etmek” anlamına gelmez. Kişinin kendi gücünü fark etmesini, haklarına erişmesini ve çevresindeki kaynaklarla bağ kurmasını sağlamayı hedefler.</p>
+      <p>Sosyal hizmet uzmanı, kişiyi yalnızca yaşadığı sorunla değil, içinde yaşadığı çevreyle birlikte ele alır. Aile, okul, iş yeri, mahalle ve kurumlar sorunun hem nedeni hem de çözümün parçası olabilir.</p>
+    </div>
+
+    <h3 style="margin-top:2rem">Mesleğin temel ilkeleri</h3>
+    <div class="grid four">
+      <div class="item"><h3>İnsan onuru</h3><p>Her insan, içinde bulunduğu koşullardan bağımsız olarak değerlidir ve saygıyı hak eder.</p></div>
+      <div class="item"><h3>Kendi kaderini belirleme</h3><p>Kararlar kişinin yerine alınmaz. Seçenekler birlikte değerlendirilir ve son söz kişiye aittir.</p></div>
+      <div class="item"><h3>Gizlilik</h3><p>Görüşmede paylaşılan bilgiler korunur. Raporlarda ve paylaşımlarda kimliğe dair ayrıntılar yer almaz.</p></div>
+      <div class="item"><h3>Sosyal adalet</h3><p>Fırsatlara ve kaynaklara eşit erişim için çalışmak mesleğin sorumluluğudur.</p></div>
+    </div>
+
+    <h3 style="margin-top:2.5rem">Bir çalışma nasıl ilerler?</h3>
+    <ol class="steps">
+      <li><h3>İlk görüşme ve tanışma</h3><p>Güven ortamı kurulur, kişinin ya da ailenin başvuru nedeni dinlenir.</p></li>
+      <li><h3>Değerlendirme</h3><p>Gözlem, görüşme ve belgeler yoluyla durumun ayrıntılı bir resmi çıkarılır. Sosyal inceleme raporu bu aşamada hazırlanır.</p></li>
+      <li><h3>Planlama</h3><p>Hedefler ve yapılacaklar, kişiyle birlikte belirlenir.</p></li>
+      <li><h3>Uygulama</h3><p>Gerekli kurumlarla iletişim kurulur, destek hizmetlerine yönlendirme yapılır, süreç takip edilir.</p></li>
+      <li><h3>Sonlandırma ve izleme</h3><p>Çalışma sonuçları değerlendirilir, gerekirse izleme görüşmeleri planlanır.</p></li>
+    </ol>
+
+    <p class="quote">Yardım etmek, birinin yerine karar vermek değil, o kişinin kendi gücüyle yürüyebileceği yolu birlikte görmektir.</p>
+  </section>
+
+  <section id="tez">
+    <h2>Tezim</h2>
+    <div class="prose">
+      <p>Bitirme tezim, dört yıllık eğitimin en uzun soluklu çalışması. Araştırmamı betimsel araştırma yöntemiyle yürütüyorum ve veriyi anket yoluyla topluyorum. Bu süreç bana, bir soruyu bilimsel olarak sormanın ne kadar titiz bir iş olduğunu gösterdi.</p>
+      <p>Tez yazmak yalnızca bilgi toplamak değil. Doğru soruyu bulmak, o soruya uygun ölçekleri seçmek, veriyi düzenli biçimde toplamak ve sonuçları abartmadan yazmak gerekiyor.</p>
+    </div>
+    <h3 style="margin-top:2rem">Araştırma sürecim</h3>
+    <ol class="steps">
+      <li><h3>Konu ve araştırma soruları</h3><p>Merak edilen konunun net, ölçülebilir ve tek bir temel soruya bağlanmış olması gerekiyor.</p></li>
+      <li><h3>Literatür taraması</h3><p>Konuyla ilgili önceki çalışmalar okunur, kuramsal çerçeve oluşturulur ve kaynaklar kaydedilir.</p></li>
+      <li><h3>Yöntemin belirlenmesi</h3><p>Betimsel araştırma deseni seçilir ve neden bu desenin uygun olduğu yöntem bölümünde gerekçelendirilir.</p></li>
+      <li><h3>Veri toplama araçları</h3><p>Anket hazırlanır, gerekiyorsa hazır ölçeklerden yararlanılır ve hangi araçların kullanıldığı açıkça belirtilir.</p></li>
+      <li><h3>Verilerin analizi ve bulgular</h3><p>Toplanan veri düzenlenir, bulgular tablolar ve açıklamalarla sunulur.</p></li>
+      <li><h3>Yazım ve düzenleme</h3><p>Metin APA 7 kurallarına göre biçimlendirilir. Metin içi atıflar ve kaynakça kontrol edilir, anket soruları Ekler bölümüne konur.</p></li>
+    </ol>
+    <h3 style="margin-top:1rem">Tez yazarken öğrendiklerim</h3>
+    <div class="grid">
+      <div class="item"><h3>Sade yazmak</h3><p>Uzun cümleler yerine net ve tek fikirli cümleler okuyucuyu daha iyi taşıyor.</p></div>
+      <div class="item"><h3>Kaynağı kaydetmek</h3><p>Okuduğum her kaynağı hemen kaydetmek, kaynakçayı sonradan kurtarmaktan çok daha kolay.</p></div>
+      <div class="item"><h3>Geri bildirimi kullanmak</h3><p>Hocanın düzeltmeleri bir eleştiri değil, tezi güçlendiren bir yol haritası.</p></div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <p class="prose" style="max-width:41rem;margin:0 0 1.5rem">Staj, rapor yazımı ve tez sürecinden notlar. Bir başlığa tıklayarak yazıyı açabilirsiniz.</p>
+    <div class="filters" id="filters" role="group" aria-label="Yazıları filtrele">
+      <button type="button" data-f="hepsi" aria-pressed="true">Hepsi</button>
+      <button type="button" data-f="staj" aria-pressed="false">Staj</button>
+      <button type="button" data-f="rapor" aria-pressed="false">Rapor</button>
+      <button type="button" data-f="tez" aria-pressed="false">Tez</button>
+    </div>
+
+    <details class="post" data-tag="staj">
+      <summary><span class="post-title">Staja başlarken: Gözlem yapmayı öğrenmek<span class="post-meta">Staj · 3 dakikalık okuma</span></span></summary>
+      <div class="post-body">
+        <p>Staja başlarken en çok “hemen yardım etmeliyim” telaşı yaşadım. Oysa ilk öğrendiğim şey, önce izlemek ve dinlemekti. Bir kurumun işleyişini, çalışanların birbirleriyle iletişimini ve görüşmenin nasıl ilerlediğini gözlemlemek, sonraki adımları çok daha net görmemi sağladı.</p>
+        <p>Gözlem yaparken kendime şu soruları soruyorum:</p>
+        <ul>
+          <li>Ne görüyorum, ne duyuyorum? (yorum katmadan)</li>
+          <li>Bu görüşmede kişinin ihtiyacı neydi?</li>
+          <li>Ben olsam hangi soruyu farklı sorardım?</li>
+        </ul>
+        <p>Bunları her gün staj defterime yazıyorum. Yazmak, gördüklerimi düzenlememe yardımcı oluyor.</p>
+      </div>
+    </details>
+
+    <details class="post" data-tag="rapor">
+      <summary><span class="post-title">Sosyal inceleme raporu yazarken dikkat ettiğim beş şey<span class="post-meta">Rapor · 4 dakikalık okuma</span></span></summary>
+      <div class="post-body">
+        <p>Sosyal inceleme raporu, bir durumun yetkililere ve diğer uzmanlara doğru aktarılmasını sağlayan temel belgedir. Yazarken şu beş noktaya dikkat etmeye çalışıyorum:</p>
+        <ul>
+          <li><b>Nesnel olmak.</b> Gördüğümü ve duyduğumu yazıyorum, yargı bildiren ifadelerden kaçınıyorum.</li>
+          <li><b>Gizliliği korumak.</b> Gereksiz kişisel ayrıntıları rapora koymuyorum.</li>
+          <li><b>Bilginin kaynağını belirtmek.</b> Bir bilgiyi kimden, nasıl aldığımı açıkça yazıyorum.</li>
+          <li><b>Güçlü yönleri de yazmak.</b> Rapor yalnızca sorunları değil, kişinin ve ailenin kaynaklarını da göstermeli.</li>
+          <li><b>Açık bir sonuç ve öneri yazmak.</b> Okuyan kişi, raporun sonunda ne yapılması gerektiğini anlayabilmeli.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="post" data-tag="tez">
+      <summary><span class="post-title">Anket hazırlarken yapılan yaygın hatalar<span class="post-meta">Tez · 4 dakikalık okuma</span></span></summary>
+      <div class="post-body">
+        <p>Tez için anket hazırlarken fark ettiğim şey, iyi bir anketin soru sayısından çok soruların kalitesiyle ilgili olduğu. Kaçınmaya çalıştığım hatalar:</p>
+        <ul>
+          <li>Tek soruda iki ayrı şeyi birden sormak.</li>
+          <li>Katılımcıyı belli bir cevaba yönlendiren ifadeler kullanmak.</li>
+          <li>Anketi çok uzun tutup katılımcıyı yormak.</li>
+          <li>Anketi uygulamadan önce birkaç kişiye denemeyi unutmak.</li>
+        </ul>
+        <p>Sorular bittikten sonra anketi tezin Ekler bölümüne koymak da, okuyucunun araştırmayı denetleyebilmesi için önemli.</p>
+      </div>
+    </details>
+
+    <details class="post" data-tag="tez">
+      <summary><span class="post-title">APA 7 ile kaynakça: Baştan düzenli çalışmanın faydası<span class="post-meta">Tez · 3 dakikalık okuma</span></span></summary>
+      <div class="post-body">
+        <p>Tezde kaynakça en çok vakit alan kısımlardan biri. Öğrendiğim en önemli şey, her kaynağı okuduğum anda kaydetmek. Metin içi atıf ile kaynakçadaki kayıt birbiriyle birebir uyuşmalı. Biri eksik ya da farklıysa bu hemen göze çarpıyor.</p>
+        <p>Biçim açısından da tüm metni aynı kurallara göre düzenliyorum: iki yana yaslı yazı, 1,5 satır aralığı ve tutarlı atıf biçimi.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="neden">
+    <h2>Neden bu siteyi kurdum?</h2>
+    <div class="prose">
+      <p>Bu siteyi önce bir ders ödevi olarak kurdum. Hocamız hepimizden Claude Code ile bir site hazırlamamızı ve yayına almamızı istedi. Yani ortaya çıkış nedeni basit: yapay zekâ destekli bir kodlama aracını kullanarak sıfırdan bir web sitesi yapmayı öğrenmek.</p>
+      <p>Ama bir süre sonra bunun bana başka bir fırsat da verdiğini fark ettim. Staj notlarım, rapor yazarken öğrendiklerim ve tez sürecim defterlerde ve dosyalarda dağınık duruyordu. Bunları kendi sayfamda toplamak, hem öğrendiklerimi düzenlememi hem de aynı yolda olan arkadaşlarıma faydalı olmayı mümkün kılıyor.</p>
+      <p>Siteyi nasıl geliştirdiğimi de burada anlatıyorum:</p>
+    </div>
+    <div class="grid">
+      <div class="item"><h3>Açık ve koyu tema</h3><p>Sayfanın sağ üstündeki Tema düğmesi, gözünü yormayan koyu görünüme geçiş yapıyor.</p></div>
+      <div class="item"><h3>Filtrelenebilir blog</h3><p>Yazıları staj, rapor ve tez etiketlerine göre ayırabiliyorsun.</p></div>
+      <div class="item"><h3>Telefonla uyumlu</h3><p>Sayfa telefon, tablet ve bilgisayarda düzgün görünecek biçimde hazırlandı.</p></div>
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <p class="prose" style="max-width:36rem;margin:0 0 1.25rem">Staj, sosyal hizmet ya da tez süreci üzerine konuşmak isterseniz bana yazabilirsiniz.</p>
+    <a class="btn" href="mailto:050323016@std.izu.edu.tr">050323016@std.izu.edu.tr</a>
+  </section>
+</main>
+
+<footer>© <span id="yil">2026</span> Canan Rabia Bodur</footer>
+</div>
+<script>
+document.getElementById("yil").textContent=new Date().getFullYear();
+
+/* tema */
+(function(){
+  var root=document.documentElement,btn=document.getElementById("theme");
+  try{var s=localStorage.getItem("tema");if(s)root.setAttribute("data-theme",s);}catch(e){}
+  btn.addEventListener("click",function(){
+    var cur=root.getAttribute("data-theme");
+    if(!cur)cur=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+    var next=cur==="dark"?"light":"dark";
+    root.setAttribute("data-theme",next);
+    try{localStorage.setItem("tema",next);}catch(e){}
+  });
+})();
+
+/* blog filtresi */
+(function(){
+  var box=document.getElementById("filters"),posts=document.querySelectorAll("details.post");
+  box.addEventListener("click",function(e){
+    var b=e.target.closest("button");if(!b)return;
+    var f=b.getAttribute("data-f");
+    box.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false");});
+    posts.forEach(function(p){p.hidden=!(f==="hepsi"||p.getAttribute("data-tag")===f);});
+  });
+})();
+</script>
+</body>
+</html>
